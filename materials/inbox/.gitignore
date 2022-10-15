@@ -131,14 +131,8 @@ dist
 
 # VScode
 .vscode/
-
-# Udemy materials
-# .udemy/
-# materials/
+package-lock.json
 
 # Solidity Compiler
 soljson-v*.js
 **/artifacts/
-
-# Binary and builds
-bin/
