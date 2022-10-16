@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: UNLICENSED
 
-pragma solidity >=0.8.0.0 <0.9.0;
+pragma solidity >=0.8.0 .0 <0.9.0;
 
 // linter warnings (red underline) about pragma version can igonored!
 
