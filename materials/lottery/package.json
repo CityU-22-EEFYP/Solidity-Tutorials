@@ -5,7 +5,8 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "test": "mocha"
+        "test": "mocha",
+        "deploy": "node deploy.js"
     },
     "author": "",
     "license": "ISC",

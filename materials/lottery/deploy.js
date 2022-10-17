@@ -13,9 +13,9 @@ const accounts = await web3.eth.getAccounts();
 
 console.log("Deploy from: ", accounts[0]);
 
-const inbox = await new web3.eth.Contract(compiled.abi)
+const lottery = await new web3.eth.Contract(compiled.abi)
 	.deploy({ data: compiled.evm.bytecode.object })
 	.send({ gas: "1000000", from: accounts[0] });
 
-console.log("Deployed to: ", inbox.options.address);
+console.log("Deployed to: ", lottery.options.address);
 provider.engine.stop();

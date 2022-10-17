@@ -3,45 +3,48 @@
 pragma solidity >=0.8.0 .0 <0.9.0;
 
 contract Lottery {
-    address private manager;
-    address[] private players;
+	address private manager;
+	address[] private players;
 
-    constructor() {
-        manager = msg.sender;
-    }
+	constructor() {
+		manager = msg.sender;
+	}
 
-    function getManager() public view returns (address) {
-        return manager;
-    }
+	function getManager() public view returns (address) {
+		return manager;
+	}
 
-    function getPlayers() public view restricted returns (address[] memory) {
-        return players;
-    }
+	function getPlayers() public view restricted returns (address[] memory) {
+		return players;
+	}
 
-    function getPlayersByIndex(uint64 index) public view restricted returns (address) {
-        return players[index];
-    }
+	function getPlayersByIndex(uint64 index) public view restricted returns (address) {
+		return players[index];
+	}
 
-    function enterLottery() public payable {
-        require(msg.value > .001 ether, "Not enough ether");
+	function getPlayersNumber() public view returns (uint256) {
+		return players.length;
+	}
 
-        players.push(msg.sender);
-    }
+	function enterLottery() public payable {
+		require(msg.value > .001 ether, "Not enough ether");
 
-    function random() private view returns (uint256) {
-        return uint256(keccak256(abi.encodePacked(block.difficulty, block.timestamp, players)));
-    }
+		players.push(msg.sender);
+	}
 
-    function pickWinner() public restricted {
-        uint256 index = random() % players.length;
-        payable(players[index]).transfer(address(this).balance);
+	function random() private view returns (uint256) {
+		return uint256(keccak256(abi.encodePacked(block.difficulty, block.timestamp, players)));
+	}
 
-        players = new address[](0);
-    }
+	function pickWinner() public restricted {
+		uint256 index = random() % players.length;
+		payable(players[index]).transfer(address(this).balance);
 
-    modifier restricted() {
-        require(msg.sender == manager, "Not the manager");
-        require(players.length > 0, "Not enough player");
-        _;
-    }
+		players = new address[](0);
+	}
+
+	modifier restricted() {
+		require(msg.sender == manager, "Not the manager");
+		_;
+	}
 }
