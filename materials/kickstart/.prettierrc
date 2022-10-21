@@ -1,0 +1,22 @@
+{
+	"overrides": [
+		{
+			"files": ["*js", "*ts", "*.prettierrc", "*.json"],
+			"options": {
+				"printWidth": 120,
+				"tabWidth": 4,
+				"useTabs": true,
+				"explicitTypes": "always"
+			}
+		},
+		{
+			"files": "*.sol",
+			"options": {
+				"printWidth": 120,
+				"tabWidth": 4,
+				"useTabs": true,
+				"explicitTypes": "always"
+			}
+		}
+	]
+}
