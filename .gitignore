@@ -142,3 +142,7 @@ soljson-v*.js
 
 # Binary and builds
 bin/
+
+# Section 7 large Zip
+.udemy/7/*zip
+!.udemy/7/kickstart-updated.zip
