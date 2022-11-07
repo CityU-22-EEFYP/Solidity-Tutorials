@@ -133,16 +133,12 @@ dist
 .vscode/
 
 # Udemy materials
-# .udemy/
-# materials/
+.udemy/
 
 # Solidity Compiler
 soljson-v*.js
 **/artifacts/
+ganache.sh
 
 # Binary and builds
 bin/
-
-# Section 7 large Zip
-.udemy/7/*zip
-!.udemy/7/kickstart-updated.zip
