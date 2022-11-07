@@ -134,6 +134,7 @@ dist
 
 # Udemy materials
 .udemy/
+materials/diagrams/
 
 # Solidity Compiler
 soljson-v*.js
