@@ -4,10 +4,10 @@
 
 ### Extentions
 
-RemixProject.ethereum-remix
-JuanBlanco.solidity
-esbenp.prettier-vscode
-(optional) trufflesuite-csi.truffle-vscode
+-   RemixProject.ethereum-remix
+-   JuanBlanco.solidity
+-   esbenp.prettier-vscode
+-   (optional) trufflesuite-csi.truffle-vscode
 
 ---
 
